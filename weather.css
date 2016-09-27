@@ -1,0 +1,75 @@
+body {
+    margin-bottom: 5em;
+}
+
+.remove {
+    float: right;
+    color: red;
+    cursor: pointer;
+}
+
+.card {
+    overflow: hidden;
+    height: 17em;
+    border-radius: 10px;
+    background-color: #CCCCCC;
+    padding: 5%;
+    margin: 10px 0;
+}
+
+.card div {
+    text-align: center;
+}
+
+.location {
+    font-size: 125%;
+}
+
+.current.temperature {
+    font-size: 250%;
+    font-weight: bold;
+}
+
+.summary,
+.highlow {
+    font-size: 125%;
+}
+
+.temperature::after {
+    content: "\2109";
+}
+
+.chance-of-rain::after {
+    content: "% chance of rain";
+}
+
+.icon {
+    height: 64px;
+    width: 64px;
+    margin: 0 auto;
+    background-image: url(Climacons.fw.png);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-radius: 20%;
+}
+
+.clear-day .icon { background-position: -171px -298px; }
+.clear-night .icon { background-position: -491px -298px; }
+.rain .icon { background-position: -363px -42px; }
+.snow .icon { background-position: -427px -170px; }
+.sleet .icon { background-position: -491px -106px; }
+.wind .icon { background-position: -427px -234px; }
+.fog .icon { background-position: -171px -234px; }
+.cloudy .icon { background-position: -107px -42px; }
+.partly-cloudy-day .icon { background-position: -235px -42px; }
+.partly-cloudy-night .icon { background-position: -299px -42px; }
+
+.footer {
+    width: 100%;
+    background-color: #EFEFEF;
+    color: #333333;
+    text-align: right;
+    padding: 1em 2em;
+    position: fixed;
+    bottom: 0px;
+}
