@@ -75,9 +75,15 @@ $(function () {
         });
     };
 
-    $(".container").click(".remove", function(ev) {
-        console.log(ev.target);
-        $(ev.target).parent().parent().parent().remove();
+    $(".container").on("click", ".remove", function(ev) {
+        var $t = $(ev.target);
+        while(!$t.hasClass('remove')) {
+            $t = $t.parent();
+        }
+        var $cell = $t.parent().parent();
+        $cell.hide('clip', {}, 500, function() {
+            $cell.remove();
+        });
     })
 
     $("#add").submit(function(ev) {
